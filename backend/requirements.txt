@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+# tortoise-orm
+# aiomysql
+# python-dotenv
+# autopep8

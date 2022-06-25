@@ -1,6 +1,6 @@
-### 初めに
+初めに
 ./frontend/
-## npx create-next-app app --ts
+npx create-next-app app --ts
 を実行
 
 使いたいライブラリは予めDockerfileに記述しておくか、docker execでコンテナ内に入りインストールする
