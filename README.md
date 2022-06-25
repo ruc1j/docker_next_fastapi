@@ -1,20 +1,39 @@
-初めに
+```ディレクトリ構成
+.
+│  
+├── docker-compose.yml
+├── backend
+│    ├── Dockerfile
+│    ├── app
+│    ├── main.py
+│    └── requirements.txt
+│  
+└── frontend
+     ├── Dockerfile
+     └── app
+ ```
+
+# 初めに
+```
 cd frontend
 npx create-next-app app --ts
+```
 を実行
 
 使いたいライブラリは予めDockerfileに記述しておくか、docker execでコンテナ内に入りインストールする
 
 yarn add @next/swc-linux-arm64-gnu @next/swc-linux-arm64-musl が要求されるが必須かよくわからん Arm Macのみ？
 
+```コンテナに入ってサーバー起動
 docker exec -it frontend sh
 yarn dev
+```
 
 tsconfig.json compilerOptionsに以下を追加
     "types": ["@emotion/react/types/css-prop"],
 
 
-''' frontend/app/.babelrc　を追加
+```frontend/app/.babelrc　を追加
 {
     "presets": [
         [
@@ -29,8 +48,9 @@ tsconfig.json compilerOptionsに以下を追加
     ],
     "plugins": ["@emotion/babel-plugin"]
 }
+```
 
-'''
-Docker便利コマンド
+```Dockerコマンドメモ
 docker-compose down --rmi all --volumes --remove-orphans キャッシュとか色々消しつつdownできる
 docker system prune -f
+```
