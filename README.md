@@ -17,6 +17,7 @@
 ```
 cd frontend
 npx create-next-app app --ts
+docker compose up
 ```
 を実行
 
