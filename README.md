@@ -1,5 +1,5 @@
 初めに
-./frontend/
+cd frontend
 npx create-next-app app --ts
 を実行
 
