@@ -14,7 +14,6 @@
  ```
 
 # 初めに
-# front
 ```
 cd frontend
 npx create-next-app app --ts
@@ -50,19 +49,6 @@ tsconfig.json compilerOptionsに以下を追加
     ],
     "plugins": ["@emotion/babel-plugin"]
 }
-```
-
-# back
-```初期設定
-docker exec -it backend /bin/sh
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip setuptools
-pip install -r requirements.txt
-```
-
-```サーバ起動
-uvicorn main:app --reload
 ```
 
 ```Dockerコマンドメモ
